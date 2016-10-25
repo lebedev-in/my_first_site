@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Мой первый сайт</title>
+	<link rel="stylesheet" href="../style.css">
+	<script type = "text/javascript">
+
+	function Play ()
+	{
+		var pcN = Math.floor (Math.random() * 100) + 1;
+		var us1Name = prompt ("Игрок 1, как Вас зовут?");
+		var us2Name = prompt ("Игрок 2, как Вас зовут?");
+
+		var us1Try = 0;
+		var us2Try = 0;
+
+		while (true)
+		{	
+			var us1N = prompt (us1Name + ", введите число.\n\nДля выхода введите q.");
+			us1Try++;
+			if (us1N == "q") break;
+
+			if (us1N == pcN)
+			{
+				alert (us1Name + ", Вы угадали, браво! \n\nКоличество Ваших попыток: " + us1Try + ".");
+				break;
+			}
+			
+			if (us1N < pcN)
+			{
+				alert ("Ваше число меньше загаданного, попробуйте ещё раз!");
+			}
+			
+			if (us1N > pcN)
+			{
+				alert ("Ваше число больше загаданного, попробуйте ещё раз!");
+			}
+
+			var us2N = prompt (us2Name + ", введите число.\n\nДля выхода введите q.");
+			us2Try++;
+			if (us2N == "q") break;
+
+			if (us2N == pcN)
+			{
+				alert (us2Name + ", Вы угадали, браво! \n\nКоличество Ваших попыток: " + us2Try + ".");
+				break;
+			}
+			
+			if (us2N < pcN)
+			{
+				alert ("Ваше число меньше загаданного, попробуйте ещё раз!");
+			}
+			
+			if (us2N > pcN)
+			{
+				alert ("Ваше число больше загаданного, попробуйте ещё раз!");
+			}
+		}
+	}
+
+</script>
+</head>
+<body>
+	<div id="header">
+		<a href = "../index.html"><b>Главная</b></a> <span>/</span>
+		<a href = "../links/puzzle.html"><b>Загадки</b></a> <span>/</span>
+		<a href = "../links/mind-breaker.html"><b>Головоломка</b></a> <span>/</span>
+		<a href = "../links/guess-1.html"><b>Угадайка</b></a> <span>/</span>
+		<a href = "../links/guess-2.html"><b>Угадайка мультиплеер</b></a>
+	</div>
+<div id="content">
+	<h1>Личный сайт студента GeekBrains</h1>
+    <div id="center">	
+		<h3>Угадайка мультиплеер</h3>			
+	    <div id="box_guess">
+	    	<p>Игра для двух игроков.<br><br>
+	    	Компютер загадал число от 1 до 100. Попробуйте угадать, что это за число!</p>
+            <br><br/>
+            <a href="#" onclick="Play();">Начать игру</a>
+	    </div>
+</div>
+
+<div id = "footer">
+	<b>Copyright © 2016</b> <a href="https://geekbrains.ru/" target = "_blank"><b>GeekBrains</b></a>
+</div>
+
+</body>
+</html>

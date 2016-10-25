@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Мой первый сайт</title>
+	<link rel="stylesheet" href="../style.css">
+	<script type="text/javascript">
+
+		function AskQuestions ()
+		{
+			var result = 0;
+			var userAnswer = document.getElementById("userAnswer1").value;
+			if (userAnswer == "кошка" || userAnswer == "Кошка" || userAnswer == "кошечка" || userAnswer == "Кошечка" || userAnswer == "кот" || userAnswer == "Кот")
+				result++;
+			userAnswer = document.getElementById("userAnswer2").value;
+			if (userAnswer == "ёлка" || userAnswer == "Ёлка" || userAnswer == "ель" || userAnswer == "Ель" || userAnswer == "елка" || userAnswer == "Елка")
+				result++;
+			userAnswer = document.getElementById("userAnswer3").value;
+			if (userAnswer == "лиса" || userAnswer == "Лиса" || userAnswer == "лисичка" || userAnswer == "Лисичка")
+				result++;
+
+			if(result == 3)
+				alert('Вы угадали все загадки! Поздравляем!');
+			else if(result == 2)
+				alert('Вы угадали две загадки, неплохо!');
+			else if(result == 1)
+				alert('Вы угадали только одну загадку.');
+			else 
+				alert('Вы ничего не угадали.');
+		}		
+
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href = "../index.html"><b>Главная</b></a> <span>/</span>
+		<a href = "../links/puzzle.html"><b>Загадки</b></a> <span>/</span>
+		<a href = "../links/mind-breaker.html"><b>Головоломка</b></a> <span>/</span>
+		<a href = "../links/guess-1.html"><b>Угадайка</b></a> <span>/</span>
+		<a href = "../links/guess-2.html"><b>Угадайка мультиплеер</b></a>
+	</div>
+<div id="content">
+	<h1>Личный сайт студента GeekBrains</h1>
+    <div id="center">
+	    	<div id = "puzzle_img">
+	    	    <img src = "../img/puzzle.png"></img>
+	    	</div>
+		<h3>Игра в загадки</h3>			
+	    <div id="box">
+	    	<h5>Попробуйте разгадать три загадки!</h5>
+	    	<p>Ночью не спит, мышей сторожит.</p>
+	    	<input type="text" id="userAnswer1">
+
+            <p>Зимой и летом одним цветом.</p>
+            <input type="text" id="userAnswer2">
+
+			<p>Рыжая, с пушистым хвостом, живёт в лесу под кустом.</p>
+	    	<input type="text" id="userAnswer3">
+
+            <br><br/>
+            <a href="#" onclick="AskQuestions();">Ответить</a>
+	    </div>
+</div>
+
+<div id = "footer">
+	<b>Copyright © 2016</b> <a href="https://geekbrains.ru/" target = "_blank"><b>GeekBrains</b></a>
+</div>
+
+</body>
+</html>
